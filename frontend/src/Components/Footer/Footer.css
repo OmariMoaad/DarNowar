@@ -32,7 +32,7 @@ font-weight: 600;
   justify-content: center;
 }
 .footer-social-icon {
-  
+  justify-content: center;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -69,4 +69,8 @@ font-weight: 600;
 }
 .footer-copyright p {
   font-size: 12px;
+}
+.footer-subscribe{
+  color: #626262;
+  font-size: 20px;
 }

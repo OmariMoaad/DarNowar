@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-logo">
         <img src={footer_logo} alt="" />
-        <p>SHOPPER</p>
+        <p>Dar Nowar</p>
       </div>
       <ul className="footer-menu">
         <li>Company</li>
@@ -19,20 +19,23 @@ const Footer = () => {
         <li>About</li>
         <li>Contact</li>
       </ul>
-      <div className="footer-social-icon">
-        <div className="footer-icons-container">
-          <img src={instagram_icon} alt="" />
-        </div>
-        <div className="footer-icons-container">
-          <img src={pinterester_icon} alt="" />
-        </div>
-        <div className="footer-icons-container">
-          <img src={whatssap_icon} alt="" />
+      <div className="footer-subscribe">
+        Rejoignez notre communauté pour recevoir des mises à jour exclusives !
+        <div className="footer-social-icon">
+          <div className="footer-icons-container">
+            <img src={instagram_icon} alt="" />
+          </div>
+          <div className="footer-icons-container">
+            <img src={pinterester_icon} alt="" />
+          </div>
+          <div className="footer-icons-container">
+            <img src={whatssap_icon} alt="" />
+          </div>
         </div>
       </div>
       <div className="footer-copyright">
         <hr />
-        <p>Copyright © 2024 SHOPPER. All rights reserved.</p>
+        <p>Copyright © 2024 DarNowar. All rights reserved.</p>
       </div>
     </div>
   );
