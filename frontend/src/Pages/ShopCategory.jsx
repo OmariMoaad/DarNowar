@@ -14,7 +14,7 @@ const ShopCategory = (props) => {
           out of 36 product
         </p>
         <div className="shopCategory-sort">
-          Sort by <img src={dropdown_icon} alt="" />
+          Tri par défaut<img src={dropdown_icon} alt="" />
         </div>
       </div>
       <div className="shopCategory-products">
@@ -33,7 +33,7 @@ const ShopCategory = (props) => {
           } else return null;
         })}
       </div>
-      <div className="shopCategory-loadMore">Load More</div>
+      <div className="shopCategory-loadMore">voir plus</div>
     </div>
   );
 };

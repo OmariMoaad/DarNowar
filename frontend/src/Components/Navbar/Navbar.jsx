@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
 import "./Navbar.css";
@@ -5,6 +6,7 @@ import logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
+import dropdown_icon from "../../Components/Assets/dropdown_icon.png";
 
 const Navbar = () => {
   const { getTotalCartItems } = useContext(ShopContext);
@@ -24,10 +26,15 @@ const Navbar = () => {
             setMenu("shop");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/">
+          <Link
+            style={{
+              textDecoration: "none",
+              color: menu === "shop" ? "green" : "",
+            }}
+            to="/"
+          >
             Shop
           </Link>
-          {menu === "shop" ? <hr /> : ""}
         </li>
         <li
           onClick={() => {
@@ -35,30 +42,68 @@ const Navbar = () => {
           }}
         >
           <Link style={{ textDecoration: "none" }} to="/men">
-            fleur chessy
-            <div class>et categorisé</div>
+            <nav>
+              <ul>
+                <li
+                  onClick={() => {
+                    setMenu("women");
+                  }}
+                  style={{
+                    color: menu === "men" ? "green" : "",
+                    textDecoration: menu === "men" ? "none" : "",
+                  }}
+                >
+                  <div
+                    style={{
+                      color: menu === "men" ? "green" : "",
+                      textDecoration: menu === "men" ? "none" : "",
+                    }}
+                  >
+                    <div>Fleurs Sechés </div>
+                    <div>
+                      <span>&</span> Stabilisé <span> </span>
+                      <img src={dropdown_icon} alt="" />
+                    </div>
+                  </div>
+
+                  <div className="dropdown">
+                    <Link to="/fleurs-sechées">Fleurs Sechées</Link>
+                    <Link to="/stabilisées">Stabilisées</Link>
+                  </div>
+                </li>
+              </ul>
+            </nav>
           </Link>
-          {menu === "men" ? <hr /> : ""}
         </li>
         <li
           onClick={() => {
             setMenu("women");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/women">
+          <Link
+            style={{
+              textDecoration: "none",
+              color: menu === "women" ? "green" : "",
+            }}
+            to="/women"
+          >
             women
           </Link>
-          {menu === "women" ? <hr /> : ""}
         </li>
         <li
           onClick={() => {
             setMenu("kids");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/kids">
+          <Link
+            style={{
+              textDecoration: "none",
+              color: menu === "kids" ? "green" : "",
+            }}
+            to="/kids"
+          >
             kids
           </Link>
-          {menu === "kids" ? <hr /> : ""}
         </li>
       </ul>
       <div className="nav-login-cart">

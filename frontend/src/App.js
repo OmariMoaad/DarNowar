@@ -26,6 +26,18 @@ function App() {
             element={<ShopCategory banner={women_banner} category="women" />}
           />
           <Route
+            path="/fleurs-sechées"
+            element={
+              <ShopCategory banner={kids_banner} category="fleurs-sechées" />
+            }
+          />
+          <Route
+            path="/stabilisées"
+            element={
+              <ShopCategory banner={kids_banner} category="stabilisées" />
+            }
+          />
+          <Route
             path="/kids"
             element={<ShopCategory banner={kids_banner} category="kid" />}
           />
