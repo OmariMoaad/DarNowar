@@ -15,7 +15,7 @@ const Navbar = () => {
       <Link style={{ textDecoration: "none" }} to="/">
         <div className="nav-logo">
           <img src={logo} alt="logo" />
-          <p>SHOPPER</p>
+          <p>Dar Nowar</p>
         </div>
       </Link>
       <ul className="nav-menu">
@@ -35,7 +35,8 @@ const Navbar = () => {
           }}
         >
           <Link style={{ textDecoration: "none" }} to="/men">
-            men
+            fleur chessy
+            <div class>et categorisé</div>
           </Link>
           {menu === "men" ? <hr /> : ""}
         </li>
