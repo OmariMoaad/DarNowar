@@ -1,0 +1,104 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo p {
+  font-size: 38px;
+  font-weight: 600;
+  color: black;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  color: #626262;
+  font-weight: 500;
+  position: relative; /* Ensure positioning for dropdown */
+}
+
+.nav-menu li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-weight: 800;
+  font-size: 18px;
+  position: relative; /* Keep position relative for dropdown */
+  padding: 10px 0; /* Add padding for better spacing */
+}
+
+.nav-menu li:hover {
+  color: green;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute; /* Position it absolutely */
+  top: 100%; /* Align it below the parent */
+  left: 0; /* Align to the left */
+  background: white; /* Background color for dropdown */
+  border: 1px solid #ccc; /* Optional border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it appears above other elements */
+  width: 200px; /* Set a width for the dropdown */
+}
+.dropdown a {
+  padding: 8px 16px; /* Padding for dropdown links */
+  color: black; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.dropdown a:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.nav-login-cart button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background: white;
+  font-size: 18px;
+  font-weight: 500;
+  color: #626262;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #626262;
+  border-radius: 75px;
+}
+
+.nav-login-cart button:active {
+  background: #f3f3f3;
+}
+
+.nav-cart-count {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff4141;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: -35px;
+  margin-left: -55px;
+}

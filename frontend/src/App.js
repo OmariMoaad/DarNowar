@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
+import Navbbar from "./Components/Navbar/Navbbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Shop from "./Pages/Shop";
 import ShopCategory from "./Pages/ShopCategory";
@@ -14,33 +14,60 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+        <Navbbar />
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route
-            path="/men"
+            path="/fleurs"
             element={<ShopCategory banner={men_banner} category="men" />}
-          />
+          >
+            <Route
+              path="fleurs-sechées"
+              element={<ShopCategory banner={men_banner} category="men" />}
+            />
+            <Route
+              path="stabilisées"
+              element={<ShopCategory banner={men_banner} category="men" />}
+            />
+            <Route
+              path="artificielles"
+              element={<ShopCategory banner={men_banner} category="men" />}
+            />
+          </Route>
           <Route
-            path="/women"
+            path="/decoration"
             element={<ShopCategory banner={women_banner} category="women" />}
-          />
+          >
+            <Route
+              path="vase"
+              element={<ShopCategory banner={women_banner} category="women" />}
+            />
+            <Route
+              path="objects"
+              element={<ShopCategory banner={women_banner} category="women" />}
+            />
+            <Route
+              path="tableaux"
+              element={<ShopCategory banner={women_banner} category="women" />}
+            />
+            <Route
+              path="moules"
+              element={<ShopCategory banner={women_banner} category="women" />}
+            />
+          </Route>
           <Route
-            path="/fleurs-sechées"
-            element={
-              <ShopCategory banner={kids_banner} category="fleurs-sechées" />
-            }
-          />
-          <Route
-            path="/stabilisées"
-            element={
-              <ShopCategory banner={kids_banner} category="stabilisées" />
-            }
-          />
-          <Route
-            path="/kids"
+            path="/services"
             element={<ShopCategory banner={kids_banner} category="kid" />}
-          />
+          >
+            <Route
+              path="abonnement"
+              element={<ShopCategory banner={kids_banner} category="kid" />}
+            />
+            <Route
+              path="personnalisation"
+              element={<ShopCategory banner={kids_banner} category="kid" />}
+            />
+          </Route>
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>

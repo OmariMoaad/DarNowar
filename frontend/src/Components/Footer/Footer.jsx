@@ -33,6 +33,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div></div>
       <div className="footer-copyright">
         <hr />
         <p>Copyright © 2024 DarNowar. All rights reserved.</p>

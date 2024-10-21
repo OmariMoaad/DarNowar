@@ -38,15 +38,15 @@ const Navbar = () => {
         </li>
         <li
           onClick={() => {
-            setMenu("men");
+            setMenu("fleurs");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/men">
+          <Link style={{ textDecoration: "none" }} to="/fleurs">
             <nav>
               <ul>
                 <li
                   onClick={() => {
-                    setMenu("women");
+                    setMenu("fleurs");
                   }}
                   style={{
                     color: menu === "men" ? "green" : "",
@@ -67,8 +67,8 @@ const Navbar = () => {
                   </div>
 
                   <div className="dropdown">
-                    <Link to="/fleurs-sechées">Fleurs Sechées</Link>
-                    <Link to="/stabilisées">Stabilisées</Link>
+                    <Link to="/fleurs/fleurs-sechées">Fleurs Sechées</Link>
+                    <Link to="/fleurs/stabilisées">Stabilisées</Link>
                   </div>
                 </li>
               </ul>
