@@ -74,7 +74,11 @@ const Navbbar = () => {
 
   return (
     <div className="navbar">
-      <Link style={{ textDecoration: "none" }} to="/">
+      <Link
+        style={{ textDecoration: "none" }}
+        to="/"
+        onClick={() => setMenu(null)}
+      >
         <div className="nav-logo">
           <img src={logo} alt="logo" />
           <p>Dar Nowar</p>
@@ -104,6 +108,7 @@ const Navbbar = () => {
                     key={subCategory.name}
                     to={subCategory.path}
                     style={{ textDecoration: "none" }}
+                    onClick={() => setMenu(key)}
                   >
                     {subCategory.name}
                   </Link>

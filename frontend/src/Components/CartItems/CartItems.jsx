@@ -1,9 +1,25 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets/cart_cross_icon.png";
 const CartItems = () => {
-  const { getTotalCartAmount ,all_product, cartItems, removeFromCart } = useContext(ShopContext);
+  const { getTotalCartAmount, all_product, cartItems, removeFromCart } =
+    useContext(ShopContext);
+  const cartHasItems = all_product.some((e) => cartItems[e.id] > 0);
+
+  if (!cartHasItems) {
+    return (
+      <div>
+        <div className="cart-items-empty">Your cart is currently empty.</div>
+        <div className="cart-items-empty-btn">
+          <Link style={{ textDecoration: "none" }} to="/collections/all">
+            Shop now
+          </Link>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="cart-items">
       <div className="cart-items-main">
