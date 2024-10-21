@@ -36,7 +36,6 @@ const ShopCategory = (props) => {
           <img src={dropdown_icon} alt="" />
         </div>
       </div>
-      <div></div>
       <div className="shopCategory-products">
         {filteredProducts.slice(0, visibleCount).map((item, i) => (
           <Item
