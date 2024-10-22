@@ -12,16 +12,17 @@ const ShopCategory = (props) => {
 
    const loadMore = (event) => {
     event.preventDefault(); 
-     setVisibleCount((prevCount) => prevCount + 9); // Load 10 more products
+     setVisibleCount((prevCount) => prevCount + 9); 
    };
    useEffect(() => {
-     setVisibleCount(9); // Reset to initial value
+     setVisibleCount(9); 
    }, [props.category]);
   return (
     <div className="shop-category">
       <img className="shopCategory-banner" src={props.banner} alt="" />
       <div class="scrolling-text-container">
         <div class="scrolling-text">
+          <img src={props.banner} alt="" />
           🌼 Discover our beautiful vases! 🌼 | 20% off on selected items! 🌼 |
           New arrivals just in! 🌼
         </div>
@@ -39,7 +40,7 @@ const ShopCategory = (props) => {
       <div className="shopCategory-products">
         {filteredProducts.slice(0, visibleCount).map((item, i) => (
           <Item
-            key={item.id} // Use item.id as a key for better performance
+            key={item.id} 
             id={item.id}
             name={item.name}
             image={item.image}

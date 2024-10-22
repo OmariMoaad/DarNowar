@@ -100,22 +100,39 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  padding: 50px 0px;
   margin: 100px 0px;
-  font-size: 20px;
+  font-size: 50px;
   font-weight: 600;
   color: #555;
 }
+
 .cart-items-empty-btn {
-  text-align: center;
-  vertical-align: middle;
-  line-height: 50px;
-  width: 100px;
-  height: 50px;
-  border: 1px solid #ffffff;
-  background: #9b4646;
-  margin: 0px 40px;
-  cursor: pointer;
+  display: inline-block;
+  padding: 12px 24px;
   font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
+  font-weight: bold;
+  color: #fff;
+  background-color: #556f8a; /* Button color */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.cart-items-empty-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.cart-items-empty-btn:active {
+  background-color: #002e63; /* Even darker shade when clicked */
+  transform: translateY(0); /* Return to original position */
+}
+
+.cart-items-empty-btn:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Add focus ring */
 }

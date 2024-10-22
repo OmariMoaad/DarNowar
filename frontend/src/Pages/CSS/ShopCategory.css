@@ -2,6 +2,7 @@
   display: block;
   margin: 30px auto;
   width: 80%;
+  padding:100px 0px; 
 }
 .shopCategory-indexSort {
   display: flex;
@@ -26,7 +27,7 @@
 }
 
 .shopCategory-loadMore button {
-  border: none; /* Remove border */
+  border: none; 
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -43,29 +44,29 @@
 }
 
 .shopCategory-loadMore button:hover {
-  color: #358a39; /* Optional: change color on hover for better feedback */
+  color: #358a39; 
 }
 .scrolling-text-container {
   overflow: hidden;
   white-space: nowrap;
-  background-color: #f8f8f8; /* Background color */
-  padding: 10px 0; /* Space around text */
-  border: 1px solid #ccc; /* Optional border */
+  background-color: #f8f8f8; 
+  padding: 10px 0; 
+  border: 1px solid #ccc; 
   position: relative;
   margin: 70px 0px;
 }
 
 .scrolling-text {
   display: inline-block;
-  animation: scroll 15s linear infinite; /* Adjust duration for speed */
-  padding-left: 100%; /* Start padding so the text is off-screen */
+  animation: scroll 15s linear infinite; 
+  padding-left: 100%; 
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(0); /* Start at the beginning */
+    transform: translateX(0); 
   }
   100% {
-    transform: translateX(-100%); /* Move left completely off-screen */
+    transform: translateX(-100%); 
   }
 }

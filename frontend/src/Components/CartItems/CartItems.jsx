@@ -13,7 +13,9 @@ const CartItems = () => {
       <div>
         <div className="cart-items-empty">Your cart is currently empty.</div>
         <div className="cart-items-empty-btn">
-          <Link style={{ textDecoration: "none" }} to="/collections/all">
+          <Link style={{ textDecoration: "none",
+            color: "white"
+           }} to="/collections/all">
             Shop now
           </Link>
         </div>

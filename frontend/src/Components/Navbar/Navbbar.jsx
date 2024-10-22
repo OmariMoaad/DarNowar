@@ -119,10 +119,10 @@ const Navbbar = () => {
         ))}
       </ul>
       <div className="nav-login-cart">
-        <Link to="/login">
+        <Link to="/login" onClick={() => setMenu(null)}>
           <button>Login</button>
         </Link>
-        <Link to="/cart">
+        <Link to="/cart" onClick={() => setMenu(null)}>
           <img src={cart_icon} alt="cart_icon" />
         </Link>
         <div className="nav-cart-count">{getTotalCartItems()}</div>
